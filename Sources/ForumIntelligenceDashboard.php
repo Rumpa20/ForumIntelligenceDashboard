@@ -57,6 +57,7 @@ function fidHookAdminAreas(&$admin_areas)
 			'alerts' => array($txt['fid_section_alerts'], array('fid_view_alerts', 'fid_manage_alerts', 'fid_manage_settings')),
 			'settings' => array($txt['fid_section_settings'], array('fid_manage_settings')),
 			),
+			),
 		),
 	);
 }
