@@ -116,7 +116,7 @@ function fid_period()
 	{
 		$from = fid_validate_date($_REQUEST['fid_from']);
 		$to = fid_validate_date($_REQUEST['fid_to']);
-		if ($from !== null && $to !== null && $from < $to && ($to - $from) <= 731 * 86400)
+		if ($from !== null && $to !== null && $from <= $to && ($to - $from) <= 731 * 86400)
 		{
 			return array(
 				'start' => $from,
