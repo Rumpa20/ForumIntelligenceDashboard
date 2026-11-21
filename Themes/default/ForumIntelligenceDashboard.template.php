@@ -707,6 +707,16 @@ function fid_export_link($type, $period_qs = '')
 	if ((int) fid_setting('fid_allow_csv') !== 1)
 		return;
 
+	// Preserve custom date filters for exports. The export controller uses
+	// fid_period(), so these parameters keep its data range identical to
+	// the one currently displayed in the dashboard.
+	if (!empty($context['fid_period']['is_custom']))
+	{
+		$period = $context['fid_period'];
+		$period_qs .= ';fid_from=' . gmdate('Y-m-d', (int) $period['start']);
+		$period_qs .= ';fid_to=' . gmdate('Y-m-d', (int) $period['end']);
+	}
+
 	echo '
 	<div class="fid-panel fid-export-panel">
 		<a class="button fid-export" href="', $scripturl, '?action=admin;area=fid;sa=export;type=', $type, $period_qs, ';', $context['session_var'], '=', $context['session_id'], '">', sprintf($txt['fid_export_link'], $txt['fid_export_type_' . $type]), '</a>
