@@ -1,4 +1,4 @@
-Forum Intelligence Dashboard v1.0.0
+Forum Intelligence Dashboard v1.0.2
 Copyright (c) 2026 rumpa
 
 Thank you for installing Forum Intelligence Dashboard, an analytics
