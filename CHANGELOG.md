@@ -4,6 +4,15 @@ All notable changes to this project are documented here.
 
 Copyright (c) 2026 rumpa. See LICENSE.txt.
 
+## 1.0.1 — 2026
+
+### Fixed
+- Custom date ranges now accept a single-day range (start date equals end date).
+- CSV export links now preserve custom start/end dates so exported rows match the dashboard's selected range.
+
+### Notes
+- These fixes are committed on the fixes-v1.0.1 branch and still require live SMF 2.1.8 installation and PHP runtime testing.
+
 ## 1.0.0 — 2026
 
 Initial public release.
