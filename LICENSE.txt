@@ -1,0 +1,28 @@
+Forum Intelligence Dashboard
+
+Copyright (c) 2026 rumpa
+
+All rights reserved.
+
+Author: rumpa
+
+This software is provided for use with Simple Machines Forum (SMF).
+
+Permission is granted to install, use, and modify this software for personal
+or forum-related use, subject to the following conditions:
+
+1. Original author attribution must be retained.
+2. The copyright notice must not be removed from redistributed copies.
+3. Modified versions must clearly identify their modifications.
+4. Redistribution or resale of this software as a standalone product requires
+   permission from the original author.
+5. This software must not be represented as an official SMF product or
+   officially endorsed by Simple Machines Forum.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED.
+
+THE AUTHOR SHALL NOT BE LIABLE FOR ANY DAMAGE OR LOSS ARISING FROM THE USE OF
+THIS SOFTWARE.
+
+Copyright Holder: rumpa

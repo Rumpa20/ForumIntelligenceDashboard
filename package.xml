@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<package-info xmlns="https://www.simplemachines.org/xml/package-info" xmlns:smf="https://www.simplemachines.org/">
+	<id>rumpa:ForumIntelligenceDashboard</id>
+	<name>Forum Intelligence Dashboard</name>
+	<type>modification</type>
+	<version>1.0.0</version>
+
+	<install for="2.1.8">
+		<readme type="file" parsebbc="true">docs/README.installer.txt</readme>
+		<license type="file" lang="english">LICENSE.txt</license>
+		<require-file name="Sources/ForumIntelligenceDashboard.php" destination="$sourcedir" description="Main controller and hook functions" />
+		<require-file name="Sources/ForumIntelligenceDashboard.subs.php" destination="$sourcedir" description="Data, cache, alert and export functions" />
+		<require-file name="Themes/default/ForumIntelligenceDashboard.template.php" destination="$themedir" description="Dashboard templates" />
+		<require-file name="Themes/default/css/ForumIntelligenceDashboard.css" destination="$themedir/css" description="Dashboard stylesheet" />
+		<require-file name="Themes/default/scripts/ForumIntelligenceDashboard.js" destination="$themedir/scripts" description="Dashboard enhancements (optional, vanilla JavaScript)" />
+		<require-file name="Themes/default/languages/ForumIntelligenceDashboard.english.php" destination="$languagedir" description="English language strings" />
+		<require-file name="Themes/default/languages/ForumIntelligenceDashboard.bengali.php" destination="$languagedir" description="Bengali language strings" />
+		<code type="file">install/install.php</code>
+		<hook hook="integrate_admin_areas" function="fidHookAdminAreas" file="$sourcedir/ForumIntelligenceDashboard.php" />
+		<hook hook="integrate_load_permissions" function="fidHookLoadPermissions" file="$sourcedir/ForumIntelligenceDashboard.php" />
+		<hook hook="integrate_load_illegal_guest_permissions" function="fidHookIllegalGuestPermissions" file="$sourcedir/ForumIntelligenceDashboard.php" />
+		<hook hook="integrate_admin_search" function="fidHookAdminSearch" file="$sourcedir/ForumIntelligenceDashboard.php" />
+		<redirect url="?action=admin;area=fid" timeout="3000" />
+	</install>
+
+	<uninstall for="2.1.8">
+		<code type="file">install/uninstall.php</code>
+		<hook hook="integrate_admin_areas" function="fidHookAdminAreas" file="$sourcedir/ForumIntelligenceDashboard.php" reverse="true" />
+		<hook hook="integrate_load_permissions" function="fidHookLoadPermissions" file="$sourcedir/ForumIntelligenceDashboard.php" reverse="true" />
+		<hook hook="integrate_load_illegal_guest_permissions" function="fidHookIllegalGuestPermissions" file="$sourcedir/ForumIntelligenceDashboard.php" reverse="true" />
+		<hook hook="integrate_admin_search" function="fidHookAdminSearch" file="$sourcedir/ForumIntelligenceDashboard.php" reverse="true" />
+		<remove-file name="$languagedir/ForumIntelligenceDashboard.english.php" error="ignore" />
+		<remove-file name="$languagedir/ForumIntelligenceDashboard.bengali.php" error="ignore" />
+		<remove-file name="$themedir/scripts/ForumIntelligenceDashboard.js" error="ignore" />
+		<remove-file name="$themedir/css/ForumIntelligenceDashboard.css" error="ignore" />
+		<remove-file name="$themedir/ForumIntelligenceDashboard.template.php" error="ignore" />
+		<remove-file name="$sourcedir/ForumIntelligenceDashboard.subs.php" error="ignore" />
+		<remove-file name="$sourcedir/ForumIntelligenceDashboard.php" error="ignore" />
+	</uninstall>
+
+	<upgrade for="2.1.8" from="1.0.0">
+		<require-file name="Sources/ForumIntelligenceDashboard.php" destination="$sourcedir" description="Main controller and hook functions" />
+		<require-file name="Sources/ForumIntelligenceDashboard.subs.php" destination="$sourcedir" description="Data, cache, alert and export functions" />
+		<require-file name="Themes/default/ForumIntelligenceDashboard.template.php" destination="$themedir" description="Dashboard templates" />
+		<require-file name="Themes/default/css/ForumIntelligenceDashboard.css" destination="$themedir/css" description="Dashboard stylesheet" />
+		<require-file name="Themes/default/scripts/ForumIntelligenceDashboard.js" destination="$themedir/scripts" description="Dashboard enhancements (optional, vanilla JavaScript)" />
+		<require-file name="Themes/default/languages/ForumIntelligenceDashboard.english.php" destination="$languagedir" description="English language strings" />
+		<require-file name="Themes/default/languages/ForumIntelligenceDashboard.bengali.php" destination="$languagedir" description="Bengali language strings" />
+		<code type="file">install/upgrade.php</code>
+	</upgrade>
+</package-info>
