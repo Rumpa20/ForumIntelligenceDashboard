@@ -32,6 +32,8 @@ function fidHookAdminAreas(&$admin_areas)
 
 	$admin_areas['fid'] = array(
 		'title' => $txt['fid_menu_title'],
+		'areas' => array(
+			'fid' => array(
 		'file' => 'ForumIntelligenceDashboard.php',
 		'function' => 'ForumIntelligenceDashboard',
 		'permission' => array(
@@ -54,9 +56,12 @@ function fidHookAdminAreas(&$admin_areas)
 			'compare' => array($txt['fid_section_compare'], array('fid_view_growth', 'fid_manage_settings')),
 			'alerts' => array($txt['fid_section_alerts'], array('fid_view_alerts', 'fid_manage_alerts', 'fid_manage_settings')),
 			'settings' => array($txt['fid_section_settings'], array('fid_manage_settings')),
+			),
+			),
 		),
 	);
 }
+
 
 /**
  * integrate_load_permissions hook: register the nine granular permissions of

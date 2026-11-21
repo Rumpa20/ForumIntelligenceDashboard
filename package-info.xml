@@ -3,7 +3,7 @@
 	<id>rumpa:ForumIntelligenceDashboard</id>
 	<name>Forum Intelligence Dashboard</name>
 	<type>modification</type>
-	<version>1.0.0</version>
+	<version>1.0.2</version>
 
 	<install for="2.1.8">
 		<readme type="file" parsebbc="true">docs/README.installer.txt</readme>
