@@ -2,7 +2,7 @@
 
 A professional analytics dashboard for Simple Machines Forum 2.1.8 administrators.
 
-**Author:** rumpa — **Copyright (c) 2026 rumpa** — **Version:** 1.0.0 — **License:** see [LICENSE.txt](LICENSE.txt) (custom license, review before submission — see docs/OFFICIAL_SUBMISSION.md)
+**Author:** rumpa — **Copyright (c) 2026 rumpa** — **Version:** 1.0.2 — **License:** see [LICENSE.txt](LICENSE.txt) (custom license, review before submission — see docs/OFFICIAL_SUBMISSION.md)
 
 ## Overview
 
@@ -35,7 +35,7 @@ Forum Intelligence Dashboard adds a "Forum Intelligence" area to the SMF admin c
 ## Installation
 
 1. Back up your database and files.
-2. Admin Center → Package Manager → Download Packages → upload `ForumIntelligenceDashboard-v1.0.0.zip`.
+2. Admin Center → Package Manager → Download Packages → upload `ForumIntelligenceDashboard-v1.0.2.zip`.
 3. Install the package. Full details: [docs/INSTALLATION.md](docs/INSTALLATION.md).
 
 ## Configuration
